@@ -77,7 +77,7 @@ const Numbers = ({ setState, state }) => (
 );
 
 const NumberOut = ({ number }) => (
-  <input type="text" defaultValue={number} readonly="readonly" />
+  <input type="text" defaultValue={number} readOnly="readonly" />
 );
 
 const Input = ({ state, setState }) => {
