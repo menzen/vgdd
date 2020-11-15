@@ -68,10 +68,10 @@ const Break = () => <div className="break" />;
 const Numbers = ({ setState, state }) => (
   <div className="numbers">
     {numbers.map((cur, idx) => (
-      <>
+      <React.Fragment key={idx}>
         {idx % 3 === 0 && <Break />}
-        <Number key={idx} cur={cur} setState={setState} state={state} />
-      </>
+        <Number cur={cur} setState={setState} state={state} />
+      </React.Fragment>
     ))}
   </div>
 );
