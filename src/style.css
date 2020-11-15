@@ -23,6 +23,7 @@ body {
   justify-content: center;
   padding: 0 15px;
   background: var(--color-3);
+  align-items: center;
 }
 
 a {
