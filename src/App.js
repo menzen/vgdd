@@ -73,11 +73,11 @@ const NumberOut = ({ number }) => <div className="number-out">{number}</div>;
 
 const Input = ({ state, setState }) => {
   const ref = useRef(null);
-  const { value, focus } = state;
+  const { value, focus, number } = state;
 
   const onSubmit = e => {
     e.preventDefault();
-    setState({ ...state, visible: false, submitted: true });
+    if (value.length && number.length) setState({ ...state, submitted: true });
   };
 
   const onChange = e => {
@@ -90,6 +90,10 @@ const Input = ({ state, setState }) => {
   if (focus) {
     ref.current.focus();
   }
+
+  useEffect(() => {
+    ref.current.focus();
+  }, []);
 
   return (
     <form onSubmit={onSubmit}>
