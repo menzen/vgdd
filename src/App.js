@@ -162,7 +162,6 @@ export default function App() {
     });
 
     saveItems(update);
-
     location.hash = "#vgdd";
     location.hash = "";
   }
