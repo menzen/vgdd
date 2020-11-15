@@ -25,7 +25,9 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 0 40px;
+  padding: 15px 40px;
+  background: #898989;
+  border-radius: 5px;
 }
 
 .break {
@@ -62,9 +64,9 @@ body {
 }
 
 .number-out {
-  font-size: 30px;
+  font-size: 40px;
   text-align: center;
-  margin: 5px 4px;
+  margin: 15px 4px 5px 4px;
   height: 60px;
   border: 3px solid #000;
   border-radius: 5px;
