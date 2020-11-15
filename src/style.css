@@ -73,14 +73,17 @@ a {
 
 .animate {
   transform: scale(1.5);
+  border-color: #fff;
 }
 
 .ok {
   background: green;
+  color: #000;
 }
 
 .del {
   background: red;
+  color: #000;
 }
 
 .number-out {

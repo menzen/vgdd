@@ -112,7 +112,7 @@ const Input = ({ state, setState }) => {
 
 const Item = ({ item, idx, onClick, active }) => (
   <li
-    className={className([idx % 2 === 0 && "odd", active && "active"])}
+    className={className([idx % 2 !== 0 && "odd", active && "active"])}
     onClick={e => onClick(e, item.key)}
   >
     <div className="value">{item.value}</div>
