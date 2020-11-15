@@ -1,6 +1,8 @@
 import React, { useState, useRef } from "react";
 import "./style.css";
 
+window.AudioContext = window.AudioContext || window.webkitAudioContext;
+
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, "DEL", 0, "OK"];
 
 const readItems = () => {
@@ -26,17 +28,18 @@ const initialState = {
   active: []
 };
 
-const generateClick = (x = 0.5) => {
+const generateClick = () => {
   try {
     var context = new AudioContext();
     var o = context.createOscillator();
     var g = context.createGain();
     o.connect(g);
     o.type = "triangle";
-    o.frequency.value = "87.31";
+    o.frequency.value = "400";
     g.connect(context.destination);
     o.start(0);
-    g.gain.exponentialRampToValueAtTime(0.00001, context.currentTime + x);
+    //g.gain.value = 1;
+    g.gain.exponentialRampToValueAtTime(0.00001, context.currentTime + 0.05);
   } catch (e) {
     console.log(e);
   }
@@ -94,7 +97,7 @@ const Numbers = ({ setState, state }) => (
 );
 
 const NumberOut = ({ number }) => (
-  <input type="text" value={number} readonly="readonly" />
+  <input type="text" defaultValue={number} readonly="readonly" />
 );
 
 const Input = ({ state, setState }) => {
