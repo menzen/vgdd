@@ -26,11 +26,27 @@ const initialState = {
   active: []
 };
 
+const generateClick = () => {
+  try {
+    var context = new AudioContext();
+    var o = context.createOscillator();
+    var g = context.createGain();
+    o.connect(g);
+    o.type = "sine";
+    g.connect(context.destination);
+    o.start(0);
+    g.gain.exponentialRampToValueAtTime(0.00001, context.currentTime + x);
+  } catch (e) {
+    console.log(e);
+  }
+};
+
 const onClickNumber = ({ e, state, setState }) => {
   const cur = e.target.innerHTML.trim();
   const { number, value, items, active } = state;
 
   animate(e.target);
+  generateClick();
 
   if (cur === "DEL") {
     if (number.length) setState({ ...state, number: number.slice(0, -1) });
