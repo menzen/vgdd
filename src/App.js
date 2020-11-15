@@ -172,6 +172,7 @@ export default function App() {
       {visible === visible && <Input state={state} setState={setState} />}
       <Numbers state={state} setState={setState} />
       {items.length > 0 && <Items state={state} setState={setState} />}
+      <a href="https://github.com/menzen/vgdd">@menzen</a>
     </div>
   );
 }
