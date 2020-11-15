@@ -1,4 +1,6 @@
-# [VGDD https://vgdd.stackblitz.io](https://vgdd.stackblitz.io/)
+# [VGDD](https://vgdd.stackblitz.io/)
+
+### [https://vgdd.stackblitz.io](https://vgdd.stackblitz.io/)
 
 a little helper app for saving the numbers in vg markets
 
