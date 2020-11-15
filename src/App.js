@@ -38,7 +38,7 @@ const onClickNumber = ({ e, state, setState }) => {
       saveItems(update);
     }
   } else if (cur === "OK") {
-    if (value.length) setState({ ...state, submitted: true });
+    if (value.length && number.length) setState({ ...state, submitted: true });
     else setState({ ...state, focus: true });
   } else setState({ ...state, number: number + "" + cur });
 };
@@ -156,9 +156,9 @@ export default function App() {
 
   return (
     <>
-      <Numbers state={state} setState={setState} />
       <NumberOut number={number} />
       {visible === visible && <Input state={state} setState={setState} />}
+      <Numbers state={state} setState={setState} />
       {items.length > 0 && <Items state={state} setState={setState} />}
     </>
   );

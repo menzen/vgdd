@@ -44,7 +44,7 @@ body {
   margin: 3px;
   border-radius: 5px;
   cursor: pointer;
-  background: lime;
+  background: #ddd;
   user-select: none;
 }
 
@@ -61,9 +61,12 @@ body {
   text-align: center;
   margin: 5px 4px;
   min-height: 75px;
-  border: 3px solid #fff;
+  border: 3px solid #000;
   border-radius: 5px;
   padding: 3px;
+  background: #000;
+  color: #fff;
+  box-shadow: inset 0 0 10px 0 #777;
 }
 
 form {
@@ -73,13 +76,14 @@ form {
 }
 
 input[type="text"] {
-  font-size: 50px;
+  font-size: 40px;
   border: 3px solid #000;
   border-radius: 5px;
   display: block;
   outline: none;
-  padding: 5px 10px;
+  padding: 10px;
   width: 100%;
+  box-shadow: inset 0 0 10px 0 #777;
 }
 
 input[type="submit"] {
@@ -89,13 +93,14 @@ input[type="submit"] {
 ul {
   font-size: 30px;
   list-style: none;
+  margin: 20px 0;
 }
 
 li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 4px;
+  padding: 10px 4px;
   border-bottom: 3px solid #000;
   cursor: pointer;
 }
