@@ -12,6 +12,11 @@ const saveItems = items => localStorage.setItem("vgdd", JSON.stringify(items));
 
 const className = classes => classes.filter(c => !!c).join(" ");
 
+const animate = el => {
+  el.classList.add("animate");
+  setTimeout(() => el.classList.remove("animate"), 200);
+};
+
 const initialState = {
   number: "",
   value: "",
