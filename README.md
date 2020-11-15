@@ -1,6 +1,8 @@
 # VGDD
 
-[run APP](https://vgdd.stackblitz.io/)
+## am helper app for saving the numbers in vg markets
+
+[APP: https://vgdd.stackblitz.io/](https://vgdd.stackblitz.io/)
 
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/vgdd)
 
