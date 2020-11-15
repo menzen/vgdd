@@ -30,6 +30,8 @@ const onClickNumber = ({ e, state, setState }) => {
   const cur = e.target.innerHTML.trim();
   const { number, value, items, active } = state;
 
+  animate(e.target);
+
   if (cur === "DEL") {
     if (number.length) setState({ ...state, number: number.slice(0, -1) });
     else {

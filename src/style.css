@@ -49,6 +49,10 @@ body {
   user-select: none;
 }
 
+.animate {
+  transform: sacle(1.5);
+}
+
 .ok {
   background: green;
 }
