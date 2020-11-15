@@ -1,8 +1,8 @@
 :root {
-  --line-color: #000;
+  --color-2: #000;
   --border-radius: 5px;
   --color-1: #ddd;
-  --color-2: #898989;
+  --color-2: #000;
   --color-3: #fff;
 }
 
@@ -39,10 +39,8 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 15px 40px;
-  background: var(--color-2);
+  background: var(--color-1);
   border-radius: var(--border-radius);
-  border-top: 3px solid var(--line-color);
-  border-bottom: 3px solid var(--line-color);
 }
 
 .break {
@@ -58,11 +56,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 3px solid var(--line-color);
+  border: 3px solid var(--color-2);
   margin: 3px;
   border-radius: var(--border-radius);
   cursor: pointer;
-  background: var(--color-1);
+  background: var(--color-2);
+  color: var(--color-3);
   user-select: none;
 }
 
@@ -82,8 +81,8 @@ body {
   font-size: 40px;
   text-align: center;
   height: 60px;
-  border-top: 3px solid var(--line-color);
-  border-bottom: 3px solid var(--line-color);
+  border-top: 3px solid var(--color-2);
+  border-bottom: 3px solid var(--color-2);
   margin: 5px 0;
   border-radius: var(--border-radius);
   padding: 3px;
@@ -110,8 +109,8 @@ input[type="text"] {
   margin-bottom: 5px;
   width: 100%;
   box-shadow: inset 0 0 10px 0 #777;
-  border-top: 3px solid var(--line-color);
-  border-bottom: 3px solid var(--line-color);
+  border-top: 3px solid var(--color-2);
+  border-bottom: 3px solid var(--color-2);
   text-align: center;
   -webkit-appearance: none;
 }
@@ -131,12 +130,12 @@ li {
   align-items: center;
   justify-content: space-between;
   padding: 10px 4px;
-  border-bottom: 3px solid var(--line-color);
+  border-bottom: 3px solid var(--color-2);
   cursor: pointer;
 }
 
 li:first-child {
-  border-top: 3px solid var(--line-color);
+  border-top: 3px solid var(--color-2);
   border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
