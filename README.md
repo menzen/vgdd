@@ -1,4 +1,4 @@
-#vgdd
+# VGDD
 
 [run APP](https://vgdd.stackblitz.io/)
 
