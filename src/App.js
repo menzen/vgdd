@@ -153,6 +153,12 @@ const Items = ({ state, setState }) => {
   );
 };
 
+const About = () => (
+  <a className="about" href="https://github.com/menzen/vgdd">
+    @menzen
+  </a>
+);
+
 export default function App() {
   const [state, setState] = useState(initialState);
   const { number, submitted, items, value } = state;
@@ -181,7 +187,7 @@ export default function App() {
       <Form state={state} setState={setState} />
       <Numbers state={state} setState={setState} />
       {items.length > 0 && <Items state={state} setState={setState} />}
-      <a href="https://github.com/menzen/vgdd">@menzen</a>
+      <About />
     </div>
   );
 }
