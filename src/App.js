@@ -108,11 +108,13 @@ const Form = ({ state, setState }) => {
   }
 
   return (
-    <form onSubmit={onSubmit}>
+    <div className="form">
       <input type="text" defaultValue={number} readOnly="readonly" />
-      <input type="text" value={value} ref={ref} onChange={onChange} />
-      <input type="submit" value="OK" />
-    </form>
+      <form onSubmit={onSubmit}>
+        <input type="text" value={value} ref={ref} onChange={onChange} />
+        <input type="submit" value="OK" />
+      </form>
+    </div>
   );
 };
 

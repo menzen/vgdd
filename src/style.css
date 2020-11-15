@@ -90,7 +90,7 @@ a {
   color: #000;
 }
 
-form {
+.form {
   border-radius: var(--border-radius) var(--border-radius) 0 0;
   background: var(--color-1);
   padding: 15px;
