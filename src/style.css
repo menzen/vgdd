@@ -41,9 +41,10 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 0 40px 15px 40px;
+  padding: 15px 40px 15px 40px;
   background: var(--color-1);
   border-radius: 0 0 var(--border-radius) var(--border-radius);
+  border: 3px solid var(--color-2);
 }
 
 .break {
@@ -87,6 +88,8 @@ body {
   border-radius: var(--border-radius) var(--border-radius) 0 0;
   background: var(--color-1);
   padding: 15px;
+  border: 3px solid var(--color-2);
+  border-bottom: none;
 }
 
 input[type="text"] {
