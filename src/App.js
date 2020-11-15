@@ -76,7 +76,9 @@ const Numbers = ({ setState, state }) => (
   </div>
 );
 
-const NumberOut = ({ number }) => <div className="number-out">{number}</div>;
+const NumberOut = ({ number }) => (
+  <input type="text" value={number} readonly="readonly" />
+);
 
 const Input = ({ state, setState }) => {
   const ref = useRef(null);
