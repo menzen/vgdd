@@ -26,13 +26,14 @@ const initialState = {
   active: []
 };
 
-const generateClick = () => {
+const generateClick = (x = 0.5) => {
   try {
     var context = new AudioContext();
     var o = context.createOscillator();
     var g = context.createGain();
     o.connect(g);
-    o.type = "sine";
+    o.type = "triangle";
+    o.frequency.value = "87.31";
     g.connect(context.destination);
     o.start(0);
     g.gain.exponentialRampToValueAtTime(0.00001, context.currentTime + x);
