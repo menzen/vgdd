@@ -1,8 +1,6 @@
 import React, { useState, useRef } from "react";
 import "./style.css";
 
-window.AudioContext = window.AudioContext || window.webkitAudioContext;
-
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, "DEL", 0, "OK"];
 
 const readItems = () => {
@@ -28,29 +26,11 @@ const initialState = {
   active: []
 };
 
-const generateClick = () => {
-  try {
-    var context = new AudioContext();
-    var o = context.createOscillator();
-    var g = context.createGain();
-    o.connect(g);
-    o.type = "triangle";
-    o.frequency.value = "400";
-    g.connect(context.destination);
-    o.start(0);
-    //g.gain.value = 1;
-    g.gain.exponentialRampToValueAtTime(0.00001, context.currentTime + 0.05);
-  } catch (e) {
-    console.log(e);
-  }
-};
-
 const onClickNumber = ({ e, state, setState }) => {
   const cur = e.target.innerHTML.trim();
   const { number, value, items, active } = state;
 
   animate(e.target);
-  generateClick();
 
   if (cur === "DEL") {
     if (number.length) setState({ ...state, number: number.slice(0, -1) });
