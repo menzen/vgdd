@@ -87,11 +87,7 @@ const Numbers = ({ setState, state }) => (
   </div>
 );
 
-const NumberOut = ({ number }) => (
-  <input type="text" defaultValue={number} readOnly="readonly" />
-);
-
-const Input = ({ state, setState }) => {
+const Form = ({ state, setState }) => {
   const ref = useRef(null);
   const { value, focus, number } = state;
 
@@ -113,9 +109,8 @@ const Input = ({ state, setState }) => {
 
   return (
     <form onSubmit={onSubmit}>
-      <label>
-        <input type="text" value={value} ref={ref} onChange={onChange} />
-      </label>
+      <input type="text" defaultValue={number} readOnly="readonly" />
+      <input type="text" value={value} ref={ref} onChange={onChange} />
       <input type="submit" value="OK" />
     </form>
   );
@@ -158,7 +153,7 @@ const Items = ({ state, setState }) => {
 
 export default function App() {
   const [state, setState] = useState(initialState);
-  const { number, visible, submitted, items, value } = state;
+  const { number, submitted, items, value } = state;
 
   if (submitted) {
     const update = [{ key: number, value }, ...items];
@@ -181,8 +176,7 @@ export default function App() {
 
   return (
     <div id="vgdd">
-      <NumberOut number={number} />
-      {visible === visible && <Input state={state} setState={setState} />}
+      <Form state={state} setState={setState} />
       <Numbers state={state} setState={setState} />
       {items.length > 0 && <Items state={state} setState={setState} />}
       <a href="https://github.com/menzen/vgdd">@menzen</a>
