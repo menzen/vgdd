@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import "./style.css";
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, "DEL", 0, "OK"];
@@ -91,10 +91,6 @@ const Input = ({ state, setState }) => {
     ref.current.focus();
   }
 
-  useEffect(() => {
-    ref.current.focus();
-  }, []);
-
   return (
     <form onSubmit={onSubmit}>
       <label>
@@ -152,6 +148,7 @@ export default function App() {
       number: "",
       value: "",
       submitted: false,
+      focus: false,
       items: update
     });
 
