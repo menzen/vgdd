@@ -34,7 +34,6 @@ body {
 
 .number {
   font-size: 40px;
-  background: #fff;
   flex-grow: 1;
   height: 100px;
   flex-basis: 30%;
@@ -45,7 +44,7 @@ body {
   margin: 3px;
   border-radius: 5px;
   cursor: pointer;
-  background: #ddd;
+  background: lime;
   user-select: none;
 }
 
