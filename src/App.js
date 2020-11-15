@@ -160,14 +160,17 @@ export default function App() {
     });
 
     saveItems(update);
+
+    location.hash = "#vgdd";
+    location.hash = "";
   }
 
   return (
-    <>
+    <div id="vgdd">
       <NumberOut number={number} />
       {visible === visible && <Input state={state} setState={setState} />}
       <Numbers state={state} setState={setState} />
       {items.length > 0 && <Items state={state} setState={setState} />}
-    </>
+    </div>
   );
 }
