@@ -17,6 +17,8 @@ const animate = el => {
   setTimeout(() => el.classList.remove("animate"), 200);
 };
 
+const hasScrollbar = element => element.scrollHeight != element.offsetHeight;
+
 const initialState = {
   number: "",
   value: "",
@@ -49,6 +51,15 @@ const onClickNumber = ({ e, state, setState }) => {
     else setState({ ...state, focus: true });
   } else setState({ ...state, number: number + "" + cur });
 };
+
+const handleAppCenter = () =>
+  setTimeout(
+    () =>
+      hasScrollbar(document.body)
+        ? document.body.classList.remove("center")
+        : document.body.classList.add("center"),
+    500
+  );
 
 const Number = ({ cur, state, setState }) => (
   <div
@@ -165,6 +176,8 @@ export default function App() {
     location.hash = "#vgdd";
     location.hash = "";
   }
+
+  handleAppCenter();
 
   return (
     <div id="vgdd">
