@@ -1,6 +1,8 @@
 import React, { useState, useRef } from "react";
 import "./style.css";
 
+document.head.innerHTML += "<link rel='apple-touch-icon' href='INSERT_FILE_PATH_HERE'>";
+
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, "DEL", 0, "OK"];
 
 const readItems = () => {
@@ -17,7 +19,7 @@ const animate = el => {
   setTimeout(() => el.classList.remove("animate"), 200);
 };
 
-const hasScrollbar = element => element.scrollHeight != element.offsetHeight;
+const hasScrollbar = element => element.scrollHeight !== element.offsetHeight;
 
 const initialState = {
   number: "",
