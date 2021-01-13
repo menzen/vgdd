@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import "./style.css";
 
-document.head.innerHTML += "<link rel='apple-touch-icon' href='https://raw.githubusercontent.com/menzen/vgdd/master/src/icon.png'>";
+// document.head.innerHTML += "<link rel='apple-touch-icon' href='https://raw.githubusercontent.com/menzen/vgdd/master/src/icon.png'>";
 document.head.innerHTML += '<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">';
 document.head.innerHTML += '<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700|Lato:400,700,900" rel="stylesheet">';
 
