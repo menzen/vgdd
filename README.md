@@ -1,4 +1,4 @@
-# [VGDD](https://vgdd.stackblitz.io/)
+# [VGDD](https://vgdd.netlify.app/)
 
 ### [https://vgdd.netlify.app/](https://vgdd.netlify.app/) - hosted on netlify (use this)
 
