@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import "./style.css";
 
-document.head.innerHTML += "<link rel='apple-touch-icon' href='https://raw.githubusercontent.com/menzen/vgdd/master/src/icon.png'>";
+// document.head.innerHTML += "<link rel='apple-touch-icon' href='https://raw.githubusercontent.com/menzen/vgdd/master/src/icon.png'>";
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, "DEL", 0, "OK"];
 
