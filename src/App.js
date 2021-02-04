@@ -18,7 +18,7 @@ const className = classes => classes.filter(c => !!c).join(" ");
 
 const animate = el => {
   el.classList.add("animate");
-  setTimeout(() => el.classList.remove("animate"), 200);
+  setTimeout(() => el.classList.remove("animate"), 50);
 };
 
 const hasScrollbar = element => element.scrollHeight !== element.offsetHeight;
