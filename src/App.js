@@ -179,7 +179,7 @@ export default function App() {
   const { number, submitted, items, value } = state;
 
   if (submitted) {
-    const update = [{ key: number, value }, ...items];
+    const update = [{ key: number + value, value }, ...items];
 
     setState({
       ...state,
