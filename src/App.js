@@ -41,7 +41,7 @@ const onClickNumber = ({ e, state, setState }) => {
   if (cur === "DEL") {
     if (number.length) setState({ ...state, number: number.slice(0, -1) });
     else {
-      const update = items.filter(item => !active.includes(item.key));
+      const update = items.filter(item => !active.includes(item.id));
 
       setState({
         ...state,
@@ -136,7 +136,7 @@ const Form = ({ state, setState }) => {
 const Item = ({ item, idx, onClick, active }) => (
   <li
     className={className([idx % 2 !== 0 && "odd", active && "active"])}
-    onClick={e => onClick(e, item.key)}
+    onClick={e => onClick(e, item.id)}
   >
     <div className="value">{item.value}</div>
     <div className="key">{item.key}</div>
@@ -145,10 +145,10 @@ const Item = ({ item, idx, onClick, active }) => (
 
 const Items = ({ state, setState }) => {
   const { items, active } = state;
-  const onClick = (e, key) => {
-    active.includes(key)
-      ? setState({ ...state, active: active.filter(i => i !== key) })
-      : setState({ ...state, active: [...active, key] });
+  const onClick = (e, id) => {
+    active.includes(id)
+      ? setState({ ...state, active: active.filter(i => i !== id) })
+      : setState({ ...state, active: [...active, id] });
   };
 
   return (
@@ -161,7 +161,7 @@ const Items = ({ state, setState }) => {
             item={item}
             idx={idx}
             onClick={onClick}
-            active={active.includes(item.key)}
+            active={active.includes(item.id)}
           />
         ))}
     </ul>
@@ -179,7 +179,7 @@ export default function App() {
   const { number, submitted, items, value } = state;
 
   if (submitted) {
-    const update = [{ key: number, value }, ...items];
+    const update = [{ key: number, value, id: number + value}, ...items];
 
     setState({
       ...state,
